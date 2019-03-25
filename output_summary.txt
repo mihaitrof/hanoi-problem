@@ -1,0 +1,8 @@
+
+The result for random strategy, after running 100  inputs from inputs.txt are:
+        *Nr Fails: 0
+        *Nr Success: 100
+        *Average Solution Length: 628
+        *Average Time: 0.0 mins, 0.0 seconds, 14.42 millis
+
+            

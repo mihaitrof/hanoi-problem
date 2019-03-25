@@ -1,0 +1,34 @@
+Seminar 3:
+- de facut 4 strategii, de prezentat
+- fiecare strategie valoreaza 1p
+- sa poata rula pe orice instanta, orice nr de tije si de piese, daca sunt prea putine tije(ex 2 tije) sa imi arate eroare
+- instanta trebuie primita fie din fisier sau din linia de comanda (recomandat din fisier)
+- starea initiala nu trebuie sa fie neaparat (1,1,1) iar starea finala nu e neaparat sa fie (n,n,n) - de exemplu
+- problema trebuie sa accepte si alte stari finale si initiale, sa poata fi customizat (1p-de luat in calcul)
+- celelalte 2 p: reprezentare a starilor, se poate face tranzitii, se face validarea (trebuie implementate functiile astea)
+- trebuie sa fim capabili sa afisam drumul, trbeuie salvat drumul
+- recomandat de afisat drumurile fara pasii gresiti, doar cei utili
+- de rulat strategiile de 100 de ori, trebuie sa calculam si sa afisam timpul mediu, lungimea medie a drumului (se intelege ca trebuie sa avem salvate undeva starile, iar dumurile sa fie unice), numarul mediu de stari tranzitate (aici intra toate druurile)  - ar putea fi puse intr-un for (random, hill climbing- doar astea 2 de rulat de 100 de ori)
+- de avut grija la functia de validare
+Tips:
+- primul element al array-ului sa fie numarul de tije sau ceva 
+- despre tranzitii: exista 2 impedimente (se gasesc in algoritm)
+- despre strategii: 
+a) random: mergand random (nu va fi optim) vedem daca poate gasi o solutie, de a demonstra ca problema poate fi verificata
+b) hill climbing: introducem un fel de scor, sa merg intr-o stare superioara doar daca am un scor in if-ul de validare
+- functie de scor ce implica adunarea si inmultirea, suma ponderata (asociem pondere diferita tijelor, ultima tija avand cea mai mare pondere, se poate folosi si pondere si pentru piese)
+- bonus, am eliberat piesa mare nu stiu ce
+- am pregatit terenul
+- am reusit sa punem piesa cea mai mare pe ultima tija
+- la functia de scor trebuie gasita, cica doar 2 din toata grupa reusesc sa gaseasca
+c) random optimizat: - in momentul in care am mai intrat intr-o stare, sa nu mai intru in ea, alg. accepta astfel doar stari noi, exista riscul sa ajung intr-o stare neblocanta, solutia ar fi sa merg inapoi cu un nr random de pasi
+d)bkt: tot timpul va merge in adancime, trebuie sa gasim o forma de ordonare a starilor, cand ajunge intr-un pas blocant merge intr-o stare inapoi
+- fiind recursiv va merge pentru o instanta cu mai putine piese si tije
+- recomandat sa se faca bkt-ul fara recursivitate (cica cu o stiva zice cineva, sau lista)
+e) a*(star)
+- sunt mai mute abordari posibile
+- recomandarea profului: in loc sa pornim din stare initiala in finala, mergem invers, din finala in initiala, nodurile prin care trecem primesc eticheta 1, iar apoi cu eticheta 2 si tot asa, se face aprcurgere in latime
+- dezavtaj: am nevoie de un spatiu de stocare mai mare decat celelalte
+- aici nu se mai aplica faza cu starea initiala si finala diferita de (1,1,1) respectiv (n,n,n)
+
+
